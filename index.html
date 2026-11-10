@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GHASSEN LABIADH EDUCATION — Vocabulaire technique : formes</title>
+<style>
+:root{--bg:#f3f6fa;--panel:#fff;--ink:#0f2238;--mute:#5d6f84;--line:#d9e2ec;--brand:#0b3a6e;--acc:#f59618;--ok:#13a05a;--ko:#d6403a;--sh:0 8px 28px rgba(15,34,56,.08)}
+:root[data-theme=dark]{--bg:#0a1626;--panel:#112238;--ink:#e8eff8;--mute:#92a5bb;--line:#223a56;--brand:#5aa2ee;--sh:0 8px 28px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:10px 18px;background:#071b34;color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.brand{display:flex;flex-direction:column;line-height:1.1}.brand b{font-size:19px;letter-spacing:.08em}.brand small{font-size:10px;letter-spacing:.3em;opacity:.7}
+#nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+#nav a{padding:7px 12px;border-radius:9px;font-size:14px;white-space:nowrap;opacity:.8}
+#nav a:hover{background:#ffffff1c;opacity:1}#nav a.on{background:var(--acc);color:#1a1100;opacity:1;font-weight:600}
+#theme{border:0;background:#ffffff1c;color:#fff;border-radius:9px;width:36px;height:36px;font-size:18px;cursor:pointer}
+main{max-width:1100px;margin:0 auto;padding:22px 16px 70px}
+.view{display:none}.view.on{display:block;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:.2em 0}h1 em{color:var(--acc);font-style:normal}h2{margin:1.2em 0 .6em}
+.eyebrow{letter-spacing:.2em;font-size:12px;color:var(--mute);margin:0}.muted{color:var(--mute)}.c{text-align:center;justify-content:center}
+.hero{background:linear-gradient(135deg,#071b34,#0b3a6e);color:#fff;border-radius:22px;padding:34px 26px;box-shadow:var(--sh)}
+.hero .eyebrow{color:#9fc2ea}.hl{color:var(--acc);font-weight:700}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{border:0;background:var(--acc);color:#1a1100;font-weight:700;padding:11px 18px;border-radius:12px;cursor:pointer;font-size:15px;display:inline-block}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.85}.btn:hover{filter:brightness(1.08)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:16px}
+.kpis div{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--sh)}
+.kpis b{display:block;font-size:30px;color:var(--brand)}.kpis span{color:var(--mute);font-size:13px}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.mode{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;cursor:pointer;color:inherit;box-shadow:var(--sh);font:inherit}
+.mode:hover{border-color:var(--acc);transform:translateY(-2px)}.mode b{display:block;font-size:17px}.mode span{font-size:13px;color:var(--mute)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+input,select{padding:11px 13px;border-radius:12px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);font:inherit}#q{flex:1;min-width:200px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:14px}
+.tc{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--sh);padding:0;text-align:left;color:inherit;font:inherit;position:relative}
+.tc:hover{border-color:var(--acc)}.tc img{width:100%;display:block;aspect-ratio:1200/760}.tc div{padding:10px 13px}.tc b{display:block}.tc small{color:var(--mute)}
+.tc.m::after{content:"✓";position:absolute;top:8px;right:8px;background:var(--ok);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:14px}
+.modal{position:fixed;inset:0;background:#000a;z-index:50;display:grid;place-items:center;padding:14px}.modal[hidden]{display:none}
+.modal .card{background:var(--panel);border-radius:20px;max-width:640px;width:100%;max-height:92vh;overflow:auto;padding:16px;position:relative}
+.modal img{width:100%;border-radius:14px}.x{position:absolute;right:12px;top:12px;border:0;background:#0008;color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:2px 11px;font-size:12px;color:var(--mute)}
+.tip{background:var(--bg);border-left:4px solid var(--acc);padding:10px 12px;border-radius:8px;margin:10px 0}
+.fc{max-width:560px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh);overflow:hidden;cursor:pointer;min-height:340px}
+.fc img{width:100%;display:block}.fc .bd{padding:14px 18px}.fc h3{margin:0 0 6px;font-size:26px}
+.arena{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--sh);max-width:720px;margin:18px auto 0}
+.arena img{width:100%;border-radius:14px;display:block}.hd{display:flex;justify-content:space-between;color:var(--mute);font-size:14px;margin-bottom:10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}@media(max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{padding:13px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:inherit;font:inherit;font-weight:600;cursor:pointer}
+.opt:hover{border-color:var(--acc)}.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.opt.ko{background:var(--ko);color:#fff;border-color:var(--ko)}
+.fb{margin-top:12px;padding:11px 13px;border-radius:12px;background:var(--bg)}.fb.ok{border-left:4px solid var(--ok)}.fb.ko{border-left:4px solid var(--ko)}
+.bar{height:11px;border-radius:9px;background:var(--line);overflow:hidden;margin:4px 0 14px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--acc))}
+.tbl{overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+table{border-collapse:collapse;width:100%}th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--bg);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+#err{position:fixed;left:0;right:0;bottom:0;background:#b00020;color:#fff;padding:10px 14px;font:13px monospace;z-index:99;display:none}
+</style>
+</head>
+<body>
+<div id="err"></div>
+<script>window.onerror=function(m,s,l){var e=document.getElementById("err");e.style.display="block";e.textContent="Erreur : "+m+" (ligne "+l+")"}</script>
+<header class="top">
+  <a class="brand" href="#accueil"><b>⚙ GHASSEN LABIADH</b><small>EDUCATION</small></a>
+  <nav id="nav">
+    <a href="#accueil">Accueil</a><a href="#lexique">Lexique</a><a href="#cartes">Cartes</a>
+    <a href="#quiz">Quiz</a><a href="#stats">Progrès</a><a href="#cao">SolidWorks</a>
+  </nav>
+  <button id="theme" aria-label="Thème">◐</button>
+</header>
+
+<main>
+  <section id="accueil" class="view">
+    <div class="hero">
+      <p class="eyebrow">ATELIER · DESSIN TECHNIQUE</p>
+      <h1>Vocabulaire technique : <em>formes</em></h1>
+      <p>43 termes illustrés en 3D. La partie <span class="hl">orange</span> de chaque dessin montre la forme à reconnaître ; les trous et alésages sont présentés en coupe.</p>
+      <div class="row"><a class="btn" href="#quiz">Commencer un quiz →</a><a class="btn ghost" href="#lexique">Explorer le lexique</a></div>
+    </div>
+    <div class="kpis">
+      <div><b id="kKnown">0</b><span>termes maîtrisés / <i id="kTotal">43</i></span></div>
+      <div><b id="kScore">0</b><span>bonnes réponses</span></div>
+      <div><b id="kRate">0%</b><span>taux de réussite</span></div>
+      <div><b id="kBest">0</b><span>record défi 60 s</span></div>
+    </div>
+    <h2>Modes d’entraînement</h2>
+    <div class="modes" id="modesHome"></div>
+  </section>
+
+  <section id="lexique" class="view">
+    <h2>Lexique illustré</h2>
+    <div class="tools"><input id="q" type="search" placeholder="Rechercher un terme…" aria-label="Rechercher"><select id="cat" aria-label="Catégorie"></select></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="cartes" class="view">
+    <h2>Cartes de révision</h2>
+    <div class="fc" id="fc" tabindex="0" role="button" aria-label="Retourner la carte"></div>
+    <div class="row c">
+      <button class="btn ghost" id="fcPrev">←</button>
+      <button class="btn ghost" id="fcRev">À revoir</button>
+      <button class="btn" id="fcOk">Je sais ✓</button>
+      <button class="btn ghost" id="fcNext">→</button>
+    </div>
+    <p class="muted c" id="fcInfo"></p>
+  </section>
+
+  <section id="quiz" class="view">
+    <h2>Quiz</h2>
+    <div class="modes" id="modes"></div>
+    <div id="arena" class="arena" hidden></div>
+  </section>
+
+  <section id="stats" class="view">
+    <h2>Progression</h2>
+    <div id="bars"></div>
+    <button class="btn ghost" id="reset">Réinitialiser la progression</button>
+  </section>
+
+  <section id="cao" class="view">
+    <h2>Reproduire les formes dans SolidWorks</h2>
+    <p class="muted">Correspondance entre le vocabulaire et les fonctions usuelles de modélisation.</p>
+    <div class="tbl"><table id="sw"><thead><tr><th>Formes</th><th>Fonction SolidWorks</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+
+<div id="modal" class="modal" hidden><div class="card" role="dialog" aria-modal="true"><button class="x" id="mx" aria-label="Fermer">✕</button><div id="mb"></div></div></div>
+
+<script>
+/* ===== LEXIQUE : 43 termes ===== */
+const TERMS=[
+["alesage","Alésage","Perçages & filetages","Surface intérieure cylindrique ou conique, usinée avec précision pour recevoir une pièce de forme correspondante, comme un arbre.","À retenir : l’alésage est du côté intérieur de la pièce."],
+["chambrage","Chambrage","Perçages & filetages","Élargissement local d’un trou, généralement cylindrique et à fond plat, destiné à loger une tête de vis, un écrou ou un élément voisin.","À distinguer de la fraisure : le chambrage est cylindrique, la fraisure est conique. Le vocabulaire peut varier selon les cours."],
+["meplat","Méplat","Reliefs & appuis","Surface plane réalisée sur une pièce qui possède normalement une section circulaire.","Exemple : une face plate usinée sur un arbre rond."],
+["arbre","Arbre","Reliefs & appuis","Partie extérieure cylindrique ou conique d’une pièce, usinée avec précision pour pénétrer dans un alésage de même géométrie.","À retenir : l’arbre correspond à la forme extérieure qui s’ajuste dans l’alésage."],
+["fraisure","Fraisure","Perçages & filetages","Évasement conique réalisé à l’entrée d’un trou, généralement pour recevoir une tête de vis fraisée.","Indice : pense à un cône à l’entrée du trou."],
+["collet","Collet","Reliefs & appuis","Couronne en saillie formée autour d’un arbre ou d’une partie cylindrique.","Le collet forme un rebord annulaire autour de la pièce."],
+["arrondi","Arrondi","Arêtes & raccordements","Forme courbe convexe qui remplace une arête vive ou adoucit le contour d’une pièce.","Un arrondi adoucit une arête extérieure."],
+["chanfrein","Chanfrein","Arêtes & raccordements","Petite surface plane et oblique créée sur l’arête d’une pièce, à la place d’un angle vif.","Contrairement à l’arrondi, le chanfrein est une surface plane."],
+["epaulement","Épaulement","Reliefs & appuis","Changement brusque de section d’une pièce qui crée une surface d’appui ou de positionnement.","On le repère souvent au passage d’un diamètre à un autre."],
+["conge","Congé","Arêtes & raccordements","Raccordement arrondi, généralement concave, entre deux surfaces qui se rencontrent.","Le congé évite un angle intérieur vif."],
+["evidement","Évidement","Creux & ouvertures","Volume retiré ou creux prévu dans une pièce, notamment pour diminuer sa masse ou dégager une zone.","Un évidement correspond à une partie en creux."],
+["embase","Embase","Reliefs & appuis","Partie servant de base, de renfort ou de support à une autre partie ou à un autre élément.","Elle constitue la base d’appui de la pièce."],
+["bossage","Bossage","Reliefs & appuis","Saillie localisée sur une pièce, souvent prévue pour servir d’appui, de fixation ou de renfort.","Un bossage ressort localement de la surface."],
+["goutte-suif","Goutte de suif","Arêtes & raccordements","Extrémité ou surface en forme de calotte sphérique, éventuellement raccordée par une portion de tore.","Dans le vocabulaire de la planche, retiens surtout la forme bombée et sphérique."],
+["rainure","Rainure","Rainures & assemblages","Entaille longue pratiquée dans une pièce pour recevoir une languette, un tenon ou un élément de guidage.","La rainure est le creux qui reçoit la languette."],
+["languette","Languette","Rainures & assemblages","Tenon de grande longueur destiné à entrer dans une rainure, souvent pour guider ou assembler deux pièces.","La languette est la partie saillante ; la rainure est le logement."],
+["gorge","Gorge","Rainures & assemblages","Dégagement étroit, généralement arrondi à sa partie inférieure, réalisé sur une pièce.","Une gorge peut notamment servir de dégagement ou recevoir un élément adapté."],
+["semelle","Semelle","Reliefs & appuis","Surface généralement plane d’une pièce, destinée à reposer sur un support ou à assurer un appui.","Pense à la face inférieure qui porte la pièce."],
+["cannelure","Cannelure","Rainures & assemblages","Rainure longitudinale formée sur une pièce, souvent répétée autour d’un arbre pour s’engager avec un moyeu correspondant.","Plusieurs cannelures peuvent transmettre un mouvement entre un arbre et un moyeu."],
+["queue-aronde","Queue d’aronde","Rainures & assemblages","Forme d’assemblage à profil trapézoïdal : une partie mâle s’engage dans une rainure de même forme pour guider ou retenir les pièces.","Sa section évoque un trapèze qui empêche le dégagement latéral."],
+["tenon","Tenon","Rainures & assemblages","Partie saillante d’une pièce, destinée à s’engager dans une rainure ou dans la mortaise d’une autre pièce.","Le tenon est la partie mâle de l’assemblage."],
+["mortaise","Mortaise","Rainures & assemblages","Évidement réalisé dans une pièce pour recevoir le tenon d’une autre pièce et former un assemblage.","Le tenon entre dans la mortaise."],
+["nervure","Nervure","Reliefs & appuis","Partie saillante, souvent mince, ajoutée à une pièce pour augmenter sa résistance ou sa rigidité.","Une nervure renforce sans devoir épaissir toute la pièce."],
+["encoche","Encoche","Creux & ouvertures","Petite entaille pratiquée sur le bord ou le contour d’une pièce.","Une encoche est généralement localisée et de petite dimension."],
+["entaille","Entaille","Creux & ouvertures","Découpe ou enlèvement de matière réalisé dans une pièce, créant une ouverture ou un retrait.","Le terme est général ; une encoche est une petite entaille."],
+["teton","Téton","Reliefs & appuis","Petite saillie, le plus souvent de forme cylindrique, qui dépasse de la surface d’une pièce.","Il peut servir au positionnement ou au maintien."],
+["trou-oblong","Trou oblong","Creux & ouvertures","Trou allongé dont les extrémités sont généralement arrondies, permettant notamment un réglage de position.","Il ressemble à une fente large terminée par deux demi-cercles."],
+["lumiere","Lumière","Creux & ouvertures","Ouverture ou orifice ménagé dans une pièce ; sa forme et sa fonction dépendent du dessin et du mécanisme.","Le trou oblong est une forme particulière d’ouverture allongée ; le mot lumière est plus général."],
+["profile","Profilé","Reliefs & appuis","Produit ou pièce obtenu avec une section transversale constante sur une certaine longueur, par laminage, extrusion ou procédé analogue.","Exemples de sections : en U, en L, en T ou en I."],
+["lamage","Lamage","Perçages & filetages","Logement cylindrique à fond plat, réalisé autour d’un trou pour fournir une surface d’appui ou noyer une tête de fixation.","Le lamage est cylindrique et à fond plat ; la fraisure est conique."],
+["collerette","Collerette","Reliefs & appuis","Rebord ou partie élargie en forme de couronne, souvent formée à l’extrémité d’un tube ou d’une pièce cylindrique.","Elle forme une lèvre ou un rebord autour de l’extrémité."],
+["fente","Fente","Creux & ouvertures","Ouverture longue et étroite, ou petite rainure, pratiquée dans une pièce.","Une fente est généralement plus étroite qu’un trou oblong."],
+["taraudage","Taraudage","Perçages & filetages","Filetage réalisé à l’intérieur d’un trou afin de recevoir une vis ou une pièce filetée extérieurement.","Taraudage = filetage intérieur."],
+["filetage","Filetage","Perçages & filetages","Ensemble des filets hélicoïdaux réalisés sur la surface extérieure d’une pièce cylindrique ou conique.","Filetage = filets extérieurs ; taraudage = filets intérieurs."],
+["trou-debouchant","Trou débouchant","Perçages & filetages","Trou qui traverse complètement la pièce et débouche sur ses deux faces.","Sur la coupe, le perçage traverse toute l’épaisseur."],
+["trou-borgne","Trou borgne","Perçages & filetages","Trou qui ne traverse pas la pièce : il se termine à l’intérieur de la matière.","Il possède un fond et ne débouche pas sur la face opposée."],
+["trou-fraisure","Trou + fraisure","Perçages & filetages","Trou dont l’entrée comporte un évasement conique destiné notamment à recevoir une tête fraisée.","Repérez la partie conique à l’entrée du trou."],
+["trou-lamage","Trou + lamage","Perçages & filetages","Trou accompagné d’un logement cylindrique à fond plat autour de son entrée.","Le logement est cylindrique et présente un fond plat."],
+["chanfrein-exterieur","Chanfrein extérieur","Arêtes & raccordements","Surface plane oblique réalisée sur une arête extérieure.","Il coupe l’arête extérieure en biais."],
+["chanfrein-interieur","Chanfrein intérieur","Arêtes & raccordements","Surface plane oblique réalisée à l’entrée d’un alésage ou d’un trou.","Il se trouve sur l’arête intérieure du perçage."],
+["bride","Bride","Reliefs & appuis","Partie élargie, souvent percée de trous, servant à assembler, fixer ou raccorder des éléments.","La planche représente une bride circulaire avec plusieurs perçages."],
+["saignees","Saignées","Creux & ouvertures","Ensemble de rainures ou fentes étroites et allongées pratiquées dans une pièce.","La planche montre plusieurs saignées parallèles."],
+["axe","Axe","Reliefs & appuis","Élément géométrique ou pièce cylindrique servant à définir ou supporter une rotation ou un alignement.","La planche l’indique à côté de la représentation « axe ou arbre »."]
+].map(([id,name,category,definition,note])=>({id,name,category,definition,note}));
+</script>
+
+<script>
+/* ===== MOTEUR 3D (SVG) ===== */
+(function(root){
+'use strict';
+const D=Math.PI/180, COL={b:[132,150,168],h:[246,150,24],c:[216,227,240]};
+const MAP={x:(a,u,v)=>[a,u,v],Y:(a,u,v)=>[u,a,v],z:(a,u,v)=>[u,v,a]};
+const nrm=a=>{const l=Math.hypot(a[0],a[1],a[2])||1;return[a[0]/l,a[1]/l,a[2]/l]};
+const area=p=>{let s=0;for(let i=0;i<p.length;i++){const a=p[i],b=p[(i+1)%p.length];s+=a[0]*b[1]-b[0]*a[1]}return s/2};
+const ccw=p=>{if(area(p)>=0)return p;const n=p.length;return p.map((_,k)=>[p[n-1-k][0],p[n-1-k][1],p[(n-2-k+n)%n][2]])};
+const circle=(r,n=40,cx=0,cy=0)=>Array.from({length:n},(_,i)=>[cx+r*Math.cos(i*2*Math.PI/n),cy+r*Math.sin(i*2*Math.PI/n)]);
+const arc=(cx,cr,R,t0,t1,n,tag)=>Array.from({length:n+1},(_,i)=>{const t=(t0+(t1-t0)*i/n)*D;return[cx+R*Math.cos(t),cr+R*Math.sin(t),tag]});
+const obround=(cx,cy,len,w,ori)=>{const r=w/2,h=len/2-r,p=[];
+  for(let i=0;i<=12;i++){const t=Math.PI*i/12;p.push([r*Math.cos(t),h+r*Math.sin(t)])}
+  for(let i=0;i<=12;i++){const t=Math.PI+Math.PI*i/12;p.push([r*Math.cos(t),-h+r*Math.sin(t)])}
+  return p.map(q=>ori==='u'?[cx+q[1],cy+q[0]]:[cx+q[0],cy+q[1]])};
+
+class Scene{
+  constructor(az=28,el=26){this.az=az;this.el=el;this.f=[];this.ln=[];
+    const a=az*D,e=el*D;this.V=[Math.sin(a)*Math.cos(e),Math.cos(a)*Math.cos(e),Math.sin(e)]}
+  add(p,n,c,o){this.f.push(Object.assign({p,n,c},o))}
+  wedge(axis,half=50){const V=this.V,t=axis==='x'?Math.atan2(V[2],V[1]):Math.atan2(V[1],V[0]);
+    const d=t/D;return{a0:d+half,a1:d+360-half}}
+  prism(poly,axis,a0,a1,o={}){
+    const W=MAP[axis],P=ccw(poly),n=P.length,t0=o.t||'b';
+    const pt=(a,i)=>W(a,P[i][0],P[i][1]);
+    const en=i=>{const j=(i+1)%n,du=P[j][0]-P[i][0],dv=P[j][1]-P[i][1],l=Math.hypot(du,dv)||1;return[dv/l,-du/l]};
+    for(let i=0;i<n;i++){const j=(i+1)%n,e=en(i),pe=en((i+n-1)%n),ne=en(j);
+      const sm=(e[0]*pe[0]+e[1]*pe[1]>.9)&&(e[0]*ne[0]+e[1]*ne[1]>.9);
+      this.add([pt(a0,i),pt(a1,i),pt(a1,j),pt(a0,j)],W(0,e[0],e[1]),P[i][2]||t0,{sm})}
+    const hs=o.holes||[];
+    this.add(P.map((_,i)=>pt(a1,i)),W(1,0,0),o.c1||t0,{holes:hs.map(h=>ccw(h[0].o).map(q=>W(a1,q[0],q[1]))),bias:hs.length?.5:0});
+    this.add(P.map((_,i)=>pt(a0,i)).reverse(),W(-1,0,0),o.c0||t0);
+    for(const h of hs){let A=a1;
+      h.forEach((s,k)=>{const O=ccw(s.o),B=A-s.d,m=O.length;
+        for(let i=0;i<m;i++){const j=(i+1)%m,du=O[j][0]-O[i][0],dv=O[j][1]-O[i][1],l=Math.hypot(du,dv)||1;
+          this.add([W(A,O[i][0],O[i][1]),W(B,O[i][0],O[i][1]),W(B,O[j][0],O[j][1]),W(A,O[j][0],O[j][1])],W(0,-dv/l,du/l),s.t||'b',{sm:true})}
+        if(!s.thru){const nx=h[k+1];this.add(O.map(q=>W(B,q[0],q[1])),W(1,0,0),s.t||'b',{holes:nx?[ccw(nx.o).map(q=>W(B,q[0],q[1]))]:[]})}
+        A=B})}
+    return this}
+  rev(poly,axis,o={}){
+    const W=MAP[axis],P=ccw(poly),n=P.length,N=o.n||56,a0=(o.a0||0)*D,a1=(o.a1===undefined?360:o.a1)*D;
+    const full=(a1-a0)>6.2,P3=(x,r,t)=>W(x,r*Math.cos(t),r*Math.sin(t));
+    for(let i=0;i<n;i++){const j=(i+1)%n,x0=P[i][0],r0=P[i][1],x1=P[j][0],r1=P[j][1];
+      if(r0<1e-6&&r1<1e-6)continue;const dx=x1-x0,dr=r1-r0,l=Math.hypot(dx,dr);if(l<1e-6)continue;
+      const nx=dr/l,nr=-dx/l,c=P[i][2]||o.t||'b';
+      for(let k=0;k<N;k++){const t0=a0+(a1-a0)*k/N,t1=a0+(a1-a0)*(k+1)/N,tm=(t0+t1)/2;
+        this.add([P3(x0,r0,t0),P3(x1,r1,t0),P3(x1,r1,t1),P3(x0,r0,t1)],W(nx,nr*Math.cos(tm),nr*Math.sin(tm)),c,{sm:true})}}
+    if(!full)[a0,a1].forEach((th,e)=>{const s=e?1:-1;
+      this.add(P.map(q=>P3(q[0],q[1],th)),W(0,-s*Math.sin(th),s*Math.cos(th)),'c',{})});
+    return this}
+  line(a,b){this.ln.push([a,b]);return this}
+  render(){
+    const az=this.az*D,el=this.el*D,ca=Math.cos(az),sa=Math.sin(az),ce=Math.cos(el),se=Math.sin(el);
+    const cam=p=>[p[0]*ca-p[1]*sa,p[0]*sa+p[1]*ca,p[2]],pr=q=>[q[0],q[1]*se-q[2]*ce];
+    const L=nrm([-.5,.55,.78]),H=nrm([L[0],L[1]+ce,L[2]+se]),vis=[];
+    for(const f of this.f){const n=cam(f.n);if(n[1]*ce+n[2]*se<1e-3)continue;
+      const q=f.p.map(cam),d=q.reduce((s,p)=>s+p[1]*ce+p[2]*se,0)/q.length+(f.bias||0);vis.push({f,n,q,d})}
+    vis.sort((a,b)=>a.d-b.d);
+    let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;const bb=s=>{x0=Math.min(x0,s[0]);x1=Math.max(x1,s[0]);y0=Math.min(y0,s[1]);y1=Math.max(y1,s[1])};
+    vis.forEach(v=>{v.s=v.q.map(pr);v.s.forEach(bb);v.hs=(v.f.holes||[]).map(h=>h.map(cam).map(pr))});
+    const ls=this.ln.map(l=>l.map(cam).map(pr));ls.forEach(l=>l.forEach(bb));
+    const bw=x1-x0||1,bh=y1-y0||1,k=Math.min(1000/bw,540/bh),cx=(x0+x1)/2,cy=(y0+y1)/2;
+    const T=s=>((s[0]-cx)*k+600).toFixed(1)+' '+((s[1]-cy)*k+365).toFixed(1);
+    const path=s=>'M'+s.map(T).join('L')+'Z';
+    let o='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">'+
+    '<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8fbfe"/><stop offset="1" stop-color="#e3ebf3"/></linearGradient>'+
+    '<pattern id="ha" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="#27425c" stroke-width="1.7" opacity=".5"/></pattern>'+
+    '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="14"/></filter></defs>'+
+    '<rect width="1200" height="760" rx="34" fill="url(#bg)"/>'+
+    '<ellipse cx="600" cy="'+((y1-cy)*k+365+16).toFixed(0)+'" rx="'+(bw*k*.42).toFixed(0)+'" ry="20" fill="#1c2f44" opacity=".22" filter="url(#bl)"/>';
+    for(const v of vis){const n=v.n,lam=Math.max(0,n[0]*L[0]+n[1]*L[1]+n[2]*L[2]),sp=Math.pow(Math.max(0,n[0]*H[0]+n[1]*H[1]+n[2]*H[2]),30)*.45,kk=.36+.64*lam;
+      const rgb='rgb('+COL[v.f.c].map(c=>Math.min(255,Math.round(c*kk+255*sp))).join(',')+')';
+      let d=path(v.s);v.hs.forEach(h=>d+=path(h));
+      o+='<path d="'+d+'" fill="'+rgb+'" fill-rule="evenodd" stroke="'+(v.f.sm?rgb:'rgba(16,30,46,.62)')+'" stroke-width="'+(v.f.sm?.8:1.4)+'" stroke-linejoin="round"/>';
+      if(v.f.c==='c')o+='<path d="'+d+'" fill="url(#ha)" fill-rule="evenodd"/>'}
+    for(const l of ls)o+='<path d="M'+T(l[0])+'L'+T(l[1])+'" stroke="#c2410c" stroke-width="3" stroke-dasharray="22 7 4 7" fill="none"/>';
+    return o+'</svg>'}
+}
+root.GHASSEN_LABIADH_SCENE=Scene;root.GHASSEN_LABIADH_H={circle,arc,obround,MAP};
+})(typeof window!=='undefined'?window:globalThis);
+
+/* ===== LES 43 FORMES ===== */
+(function(root){
+'use strict';
+const S0=root.GHASSEN_LABIADH_SCENE,{circle,arc,obround}=root.GHASSEN_LABIADH_H;
+const sc=(az,el)=>new S0(az,el);
+const F={};
+const tube=(id,prof,o)=>{F[id]=()=>{const S=sc(28,24),w=S.wedge('x');return S.rev(prof,'x',Object.assign({a0:w.a0,a1:w.a1},o))}};
+const shaft=(id,prof,az=28,el=22)=>{F[id]=()=>sc(az,el).rev(prof,'x')};
+const disc=(id,prof)=>{F[id]=()=>{const S=sc(28,38),w=S.wedge('z');return S.rev(prof,'z',{a0:w.a0,a1:w.a1})}};
+const ext=(id,poly,len=140,o={},az=30,el=26)=>{F[id]=()=>sc(az,el).prism(poly,'Y',0,len,o)};
+const blk=h=>[[-90,0],[90,0],[90,h],[-90,h]];
+
+tube('alesage',[[0,40],[0,66],[170,66],[170,40,'h']]);
+tube('chambrage',[[0,34],[0,66],[170,66],[170,34],[110,34,'h'],[110,50,'h'],[60,50,'h'],[60,34]]);
+F.meplat=()=>{const S=sc(28,26),t0=Math.asin(26/46),A=Math.PI-t0,B=2*Math.PI+t0,poly=[];
+  for(let i=0;i<=44;i++){const t=A+(B-A)*i/44;poly.push([46*Math.cos(t),46*Math.sin(t)])}
+  poly[poly.length-1][2]='h';S.rev([[0,0],[0,46],[100,46],[100,0]],'x');S.prism(poly,'x',100,170);return S};
+shaft('arbre',[[0,0],[0,34,'h'],[60,34,'h'],[60,52],[150,52,'h'],[150,0]]);
+F.fraisure=()=>sc(28,24).rev([[0,0],[0,58],[120,58],[120,34,'h'],[100,14],[40,14],[40,0]],'x');
+shaft('collet',[[0,0],[0,34],[50,34,'h'],[50,54,'h'],[72,54,'h'],[72,34],[150,34],[150,0]]);
+F.arrondi=()=>sc(28,24).rev([[0,0],[0,50],[110,50]].concat(arc(110,30,20,90,0,12,'h')).concat([[130,0]]),'x');
+shaft('chanfrein',[[0,0],[0,50],[114,50,'h'],[130,34],[130,0]]);
+shaft('epaulement',[[0,0],[0,56],[80,56],[80,34,'h'],[150,34],[150,0]]);
+F.conge=()=>sc(28,24).rev([[0,0],[0,56],[80,56],[80,48]].concat(arc(94,48,14,180,270,10,'h')).concat([[150,34],[150,0]]),'x');
+tube('evidement',[[0,0],[0,56],[130,56],[130,40,'h'],[50,40,'h'],[50,0]]);
+shaft('embase',[[0,0],[0,66,'h'],[26,66,'h'],[26,40],[120,40],[120,0]]);
+shaft('bossage',[[0,0],[0,60],[100,60],[100,38,'h'],[114,38,'h'],[114,0]]);
+F['goutte-suif']=()=>{const Rs=(2500+900)/60,xc=140-Rs,pts=[];
+  for(let i=0;i<=14;i++){const f=Math.asin(50/Rs)*(1-i/14);pts.push([xc+Rs*Math.cos(f),Rs*Math.sin(f),'h'])}
+  return sc(28,22).rev([[0,0],[0,26],[95,26],[95,50],[110,50]].concat(pts),'x')};
+F.gorge=()=>sc(28,22).rev([[0,0],[0,46],[70,46,'h']].concat(arc(81,40,11,180,360,10,'h')).concat([[92,46],[150,46],[150,0]]),'x');
+F.teton=()=>sc(28,24).rev([[0,0],[0,60],[100,60],[100,16,'h'],[135,16,'h'],[135,0]],'x');
+F.collerette=()=>{const S=sc(28,24),w=S.wedge('x'),o=[[0,33],[0,40],[110,40]];
+  for(let i=0;i<=9;i++){const f=i*10*Math.PI/180;o.push([110+24*Math.sin(f),64-24*Math.cos(f),'h'])}
+  o.push([127,50,'h']);
+  for(let i=9;i>=0;i--){const f=i*10*Math.PI/180;o.push([110+17*Math.sin(f),50-17*Math.cos(f),'h'])}
+  o[o.length-1][2]='b';return S.rev(o,'x',{a0:w.a0,a1:w.a1})};
+F.taraudage=()=>{const S=sc(28,24),w=S.wedge('x'),p=[[0,34],[0,66],[170,66],[170,34]];
+  const z=[];for(let i=8;i>=0;i--){const x=24+i*14;z.push([x,34,'h']);if(i)z.push([x-7,43,'h'])}
+  return S.rev(p.concat(z),'x',{a0:w.a0,a1:w.a1})};
+F.filetage=()=>{const S=sc(-30,22),pts=[[0,0],[0,27]];
+  for(let i=0;i<14;i++){pts.push([i*11+5.5,31,'h']);pts.push([i*11+11,27,'h'])}
+  pts.push([154,27],[154,0]);S.rev(pts,'x');S.prism(circle(52,6),'x',154,190);return S};
+F.cannelure=()=>{const S=sc(28,24),N=10,P=[],ss=.2;
+  for(let i=0;i<N;i++){const b=i*2*Math.PI/N,a=b-ss,c=b+ss,pn=(t,r,g)=>[r*Math.cos(t),r*Math.sin(t),g];
+    P.push(pn(a,52,'h'),pn(a,42,'h'),pn(c,42,'h'),pn(c,52,'b'));
+    const nb=(i+1)*2*Math.PI/N-ss;for(let k=1;k<4;k++)P.push(pn(c+(nb-c)*k/4,52,'b'))}
+  return S.prism(P,'x',0,160)};
+F.fente=()=>{const S=sc(30,28),R=62,s=7,t=Math.acos(s/R);
+  S.rev([[0,0],[0,28],[80,28],[80,0]],'x');S.prism(circle(R,48),'x',80,96,{c1:'h'});
+  [[-t,t],[Math.PI-t,Math.PI+t]].forEach(([a,b])=>{const P=[];
+    for(let i=0;i<=20;i++){const q=a+(b-a)*i/20;P.push([R*Math.cos(q),R*Math.sin(q)])}
+    P[P.length-1][2]='h';S.prism(P,'x',96,112)});return S};
+F.axe=()=>sc(28,22).rev([[0,0],[0,32],[8,36,'h'],[182,36,'h'],[190,32,'h'],[190,0]],'x').line([-30,0,0],[225,0,0]);
+
+ext('rainure',[[-90,0],[90,0],[90,70],[22,70,'h'],[22,40,'h'],[-22,40,'h'],[-22,70],[-90,70]]);
+ext('languette',[[-90,0],[90,0],[90,34],[24,34,'h'],[24,66,'h'],[-24,66,'h'],[-24,34],[-90,34]]);
+ext('queue-aronde',[[-90,0],[90,0],[90,64],[34,64,'h'],[58,30,'h'],[-58,30,'h'],[-34,64],[-90,64]]);
+ext('saignees',[[-90,0],[90,0],[90,70]].concat([66,26,-14,-54].flatMap(x=>[[x,70,'h'],[x,34,'h'],[x-12,34,'h'],[x-12,70]])).concat([[-90,70]]),110);
+ext('encoche',[[-90,0],[90,0],[90,70],[40,70,'h'],[40,50,'h'],[22,50,'h'],[22,70],[-30,70,'h'],[-30,50,'h'],[-48,50,'h'],[-48,70],[-90,70]],36);
+ext('entaille',[[-90,0],[90,0],[90,34,'h'],[30,34,'h'],[30,70],[-90,70]],36);
+ext('chanfrein-exterieur',[[-90,0],[90,0],[90,48,'h'],[66,70],[-90,70]],130);
+F.profile=()=>sc(30,26).prism([[-14,0],[14,0],[14,58],[70,58],[70,80],[-70,80],[-70,58],[-14,58]],'Y',0,190,{c1:'h'});
+F.semelle=()=>{const S=sc(30,26);S.prism([[-100,0],[100,0],[100,22],[-100,22]],'Y',0,140,{t:'h'});
+  S.prism([[-45,22],[45,22],[45,78],[-45,78]],'Y',0,140);return S};
+F.tenon=()=>{const S=sc(30,26);S.prism(blk(120),'Y',0,90);S.prism(obround(0,60,90,44,'v'),'Y',90,130,{t:'h'});return S};
+F.mortaise=()=>sc(30,26).prism(blk(120),'Y',0,90,{holes:[[{o:obround(0,60,90,44,'v'),d:55,t:'h'}]]});
+F.lumiere=()=>sc(30,24).prism([[-70,0],[70,0],[70,140],[-70,140]],'Y',0,22,{holes:[[{o:obround(0,70,96,30,'v'),d:22,thru:true,t:'h'}]]});
+F['trou-oblong']=()=>sc(30,34).prism([[-90,-60],[90,-60],[90,60],[-90,60]],'z',0,56,{holes:[[{o:obround(0,0,90,36,'v'),d:56,thru:true,t:'h'}]]});
+F.lamage=()=>sc(30,36).prism([[-80,-80],[80,-80],[80,80],[-80,80]],'z',0,60,{holes:[[{o:circle(42),d:20,t:'h'},{o:circle(20),d:40,thru:true}]]});
+F.nervure=()=>{const S=sc(32,26);S.prism([[0,0],[140,0],[140,22],[24,22],[24,120],[0,120]],'x',-90,90);
+  S.prism([[24,22],[112,22],[24,104]],'x',-12,12,{t:'h'});return S};
+F.bride=()=>{const S=sc(30,34);
+  S.prism(circle(100,48),'z',0,16,{t:'h',holes:[0,1,2,3].map(i=>[{o:circle(11,20,72*Math.cos(i*Math.PI/2+.78),72*Math.sin(i*Math.PI/2+.78)),d:16,thru:true}])});
+  S.prism(circle(46,48),'z',16,60,{holes:[[{o:circle(26,32),d:44,thru:true}]]});return S};
+
+disc('trou-debouchant',[[0,26],[0,100],[56,100],[56,26,'h']]);
+disc('trou-borgne',[[0,0],[0,100],[56,100],[56,24,'h'],[16,24,'h'],[2,0]]);
+disc('trou-fraisure',[[0,18],[0,100],[56,100],[56,50,'h'],[38,18]]);
+disc('trou-lamage',[[0,18],[0,100],[56,100],[56,48,'h'],[38,48,'h'],[38,18]]);
+tube('chanfrein-interieur',[[0,36],[0,64],[150,64],[150,48,'h'],[138,36]]);
+
+root.GHASSEN_LABIADH_FIGS=F;
+root.GHASSEN_LABIADH_IMG={};
+for(const k in F){try{root.GHASSEN_LABIADH_IMG[k]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(F[k]().render())}catch(e){console.warn('illustration',k,e)}}
+})(window);
+</script>
+
+<script>
+/* ===== APPLICATION ===== */
+'use strict';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEY='GHASSEN LABIADH-edu-v2';
+let S=Object.assign({p:{},score:0,wrong:0,best:0,theme:''},JSON.parse(localStorage.getItem(KEY)||'{}'));
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+TERMS.forEach(t=>t.image=(window.GHASSEN_LABIADH_IMG||{})[t.id]||'');
+const photo=t=>'https://www.google.com/search?tbm=isch&q='+encodeURIComponent(t.name+' pièce mécanique dessin technique');
+const P=id=>S.p[id]||(S.p[id]={ok:0,ko:0});
+const known=t=>{const p=S.p[t.id];return !!p&&p.ok>=2&&p.ok>p.ko};
+const CATS=[...new Set(TERMS.map(t=>t.category))];
+
+/* navigation */
+function show(){const id=(location.hash||'#accueil').slice(1),v=$('#'+id)&&$('#'+id).classList.contains('view')?id:'accueil';
+  $$('.view').forEach(e=>e.classList.toggle('on',e.id===v));$$('#nav a').forEach(a=>a.classList.toggle('on',a.hash==='#'+v));
+  if(v==='accueil')home();if(v==='stats')stats();if(v==='cartes')card();scrollTo(0,0)}
+addEventListener('hashchange',show);
+
+/* thème */
+const applyTheme=()=>document.documentElement.dataset.theme=S.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+$('#theme').onclick=()=>{S.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';save();applyTheme()};
+
+/* accueil */
+const MODES=[['qcm','QCM illustré','Quel est ce terme ? 4 choix'],['vf','Vrai / Faux','L’étiquette correspond-elle au dessin ?'],
+['write','Écrire le terme','Tape le nom exact'],['chrono','Défi 60 secondes','Un maximum de bonnes réponses'],
+['exam','Examen blanc','20 questions, correction à la fin'],['smart','Révision intelligente','Priorité à tes points faibles']];
+const modeHTML=MODES.map(m=>`<button class="mode" data-m="${m[0]}"><b>${m[1]}</b><span>${m[2]}</span></button>`).join('');
+$('#modes').innerHTML=$('#modesHome').innerHTML=modeHTML;
+document.addEventListener('click',e=>{const b=e.target.closest('.mode');if(!b)return;
+  if(location.hash!=='#quiz'){location.hash='#quiz'}setTimeout(()=>startQuiz(b.dataset.m),30)});
+function home(){const n=S.score+S.wrong;$('#kKnown').textContent=TERMS.filter(known).length;$('#kTotal').textContent=TERMS.length;
+  $('#kScore').textContent=S.score;$('#kRate').textContent=n?Math.round(100*S.score/n)+'%':'0%';$('#kBest').textContent=S.best}
+
+/* lexique */
+$('#cat').innerHTML='<option value="">Toutes les catégories</option>'+CATS.map(c=>`<option>${esc(c)}</option>`).join('');
+function grid(){const q=norm($('#q').value),c=$('#cat').value;
+  $('#grid').innerHTML=TERMS.filter(t=>(!c||t.category===c)&&(!q||norm(t.name+' '+t.definition).includes(q))).map(t=>
+   `<button class="tc ${known(t)?'m':''}" data-id="${t.id}"><img loading="lazy" src="${t.image}" alt="${esc(t.name)}"><div><b>${esc(t.name)}</b><small>${esc(t.category)}</small></div></button>`).join('')||'<p class="muted">Aucun résultat.</p>'}
+$('#q').oninput=$('#cat').onchange=grid;
+$('#grid').onclick=e=>{const b=e.target.closest('.tc');if(b)detail(b.dataset.id)};
+function detail(id){const t=TERMS.find(x=>x.id===id);
+  $('#mb').innerHTML=`<img src="${t.image}" alt="${esc(t.name)}"><h2>${esc(t.name)}</h2><span class="tag">${esc(t.category)}</span><p>${esc(t.definition)}</p><div class="tip">${esc(t.note)}</div>
+  <div class="row"><a class="btn ghost" target="_blank" rel="noopener" href="${photo(t)}">Photos sur Internet ↗</a><button class="btn" id="mk">${known(t)?'Marquer à revoir':'Je maîtrise ce terme ✓'}</button></div>`;
+  $('#modal').hidden=false;$('#mk').onclick=()=>{const p=P(id);if(known(t)){p.ok=0;p.ko=Math.max(p.ko,1)}else{p.ok=Math.max(p.ok,2);p.ko=Math.min(p.ko,p.ok-1)}save();$('#modal').hidden=true;grid()}}
+$('#mx').onclick=()=>$('#modal').hidden=true;$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').hidden=true};
+addEventListener('keydown',e=>{if(e.key==='Escape')$('#modal').hidden=true});
+
+/* cartes */
+let deck=shuffle(TERMS),di=0,flip=false;
+function card(){const t=deck[di];$('#fc').innerHTML=flip?
+  `<div class="bd"><h3>${esc(t.name)}</h3><span class="tag">${esc(t.category)}</span><p>${esc(t.definition)}</p><div class="tip">${esc(t.note)}</div><a class="btn ghost" target="_blank" rel="noopener" href="${photo(t)}" onclick="event.stopPropagation()">Photos sur Internet ↗</a></div>`:
+  `<img src="${t.image}" alt="Illustration à identifier"><div class="bd c"><p class="muted">Quel est ce terme ? Touche la carte pour voir la réponse.</p></div>`;
+  $('#fcInfo').textContent=`${di+1} / ${deck.length} — ${TERMS.filter(known).length} maîtrisés`}
+const go=d=>{di=(di+d+deck.length)%deck.length;flip=false;card()};
+$('#fc').onclick=()=>{flip=!flip;card()};$('#fc').onkeydown=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();flip=!flip;card()}};
+$('#fcNext').onclick=()=>go(1);$('#fcPrev').onclick=()=>go(-1);
+$('#fcOk').onclick=()=>{const p=P(deck[di].id);p.ok+=2;save();go(1)};
+$('#fcRev').onclick=()=>{const p=P(deck[di].id);p.ko++;save();go(1)};
+
+/* quiz */
+let Q=null;const A=$('#arena');
+function pool(mode){if(mode==='smart'){const w=TERMS.flatMap(t=>{const p=P(t.id),n=Math.max(1,3+p.ko-p.ok);return Array(n).fill(t)});return shuffle(w).filter((t,i,a)=>a.indexOf(t)===i)}
+  return shuffle(TERMS)}
+function startQuiz(mode){clearInterval(Q&&Q.tm);const list=pool(mode);
+  Q={mode,list:mode==='chrono'?list.concat(shuffle(TERMS)):mode==='exam'?list.slice(0,20):list.slice(0,10),i:0,ok:0,miss:[],t:60};
+  A.hidden=false;if(mode==='chrono')Q.tm=setInterval(()=>{Q.t--;const e=$('#qt');if(e)e.textContent='⏱ '+Q.t+' s';if(Q.t<=0)end()},1000);
+  next();A.scrollIntoView({behavior:'smooth'})}
+function head(){return `<div class="hd"><span>${MODES.find(m=>m[0]===Q.mode)[1]}</span>${Q.mode==='chrono'?`<span id="qt">⏱ ${Q.t} s</span>`:`<span>${Q.i+1} / ${Q.list.length}</span>`}<span>✓ ${Q.ok}</span></div>`}
+function options(t){const same=shuffle(TERMS.filter(x=>x.id!==t.id&&x.category===t.category)),oth=shuffle(TERMS.filter(x=>x.id!==t.id&&x.category!==t.category));
+  return shuffle([t,...same.concat(oth).slice(0,3)])}
+function next(){if(Q.i>=Q.list.length)return end();const t=Q.list[Q.i];Q.cur=t;Q.done=false;let body='';
+  if(Q.mode==='vf'){Q.claim=Math.random()<.5?t:shuffle(TERMS.filter(x=>x.id!==t.id))[0];
+    body=`<img src="${t.image}" alt=""><h3 class="c">Ce dessin représente : « ${esc(Q.claim.name)} »</h3><div class="opts"><button class="opt" data-v="1">Vrai</button><button class="opt" data-v="0">Faux</button></div>`}
+  else if(Q.mode==='write')body=`<img src="${t.image}" alt=""><div class="row"><input id="wi" placeholder="Nom du terme…" autocomplete="off" style="flex:1"><button class="btn" id="wb">Valider</button></div>`;
+  else{Q.opts=options(t);body=`<img src="${t.image}" alt=""><div class="opts">${Q.opts.map((o,i)=>`<button class="opt" data-i="${i}">${esc(o.name)}</button>`).join('')}</div>`}
+  A.innerHTML=head()+body+'<div id="fb"></div>';const wi=$('#wi');if(wi){wi.focus();wi.onkeydown=e=>{if(e.key==='Enter')submit()};$('#wb').onclick=submit}}
+function submit(){if(Q.done)return;const v=$('#wi').value;if(!v.trim())return;reply(norm(v)===norm(Q.cur.name),null)}
+A.onclick=e=>{const b=e.target.closest('.opt');if(!b||Q.done)return;
+  if(b.dataset.v!==undefined)reply((b.dataset.v==='1')===(Q.claim.id===Q.cur.id),b);else reply(Q.opts[+b.dataset.i].id===Q.cur.id,b)};
+function reply(ok,btn){Q.done=true;const t=Q.cur,p=P(t.id);ok?(p.ok++,S.score++,Q.ok++):(p.ko++,S.wrong++,Q.miss.push(t));save();
+  if(Q.mode==='exam'||Q.mode==='chrono'){Q.i++;return next()}
+  $$('.opt',A).forEach(o=>{o.disabled=true;if(o.dataset.i!==undefined&&Q.opts[+o.dataset.i].id===t.id)o.classList.add('ok')});
+  if(btn&&!ok)btn.classList.add('ko');if(btn&&btn.dataset.v!==undefined)btn.classList.add(ok?'ok':'ko');
+  $('#fb').innerHTML=`<div class="fb ${ok?'ok':'ko'}"><b>${ok?'Bravo !':'Réponse : '+esc(t.name)}</b><br>${esc(t.definition)}<br><small>${esc(t.note)}</small></div><div class="row"><button class="btn" id="nx">Suivant →</button></div>`;
+  $('#nx').onclick=()=>{Q.i++;next()};$('#nx').focus()}
+function end(){clearInterval(Q.tm);const n=Q.mode==='chrono'?Q.ok+Q.miss.length:Q.list.length;if(Q.mode==='chrono'&&Q.ok>S.best){S.best=Q.ok;save()}
+  A.innerHTML=`<h2 class="c">Terminé : ${Q.ok} bonnes réponses sur ${n}</h2>`+(Q.miss.length?`<p class="muted">À revoir :</p><div class="grid">${Q.miss.filter((t,i,a)=>a.indexOf(t)===i).map(t=>`<button class="tc" data-id="${t.id}"><img src="${t.image}" alt=""><div><b>${esc(t.name)}</b></div></button>`).join('')}</div>`:'<p class="c">Sans faute 🎉</p>')+
+  `<div class="row c"><button class="btn" id="again">Rejouer</button></div>`;
+  $('#again').onclick=()=>startQuiz(Q.mode);$$('.tc',A).forEach(b=>b.onclick=()=>detail(b.dataset.id))}
+
+/* progression */
+function stats(){$('#bars').innerHTML=[['Total',TERMS]].concat(CATS.map(c=>[c,TERMS.filter(t=>t.category===c)])).map(([n,l])=>{const k=l.filter(known).length,pc=Math.round(100*k/l.length);
+  return `<div><b>${esc(n)}</b> <span class="muted">${k} / ${l.length}</span><div class="bar"><i style="width:${pc}%"></i></div></div>`}).join('')}
+$('#reset').onclick=()=>{if(confirm('Effacer toute la progression ?')){S.p={};S.score=S.wrong=S.best=0;save();stats()}};
+
+/* SolidWorks */
+const SW=[['Arbre, épaulement, collet, gorge, méplat, téton','Base/Bossage avec révolution, puis Enlèvement de matière avec révolution (gorge) ou extrudé (méplat)'],
+['Congé, arrondi','Fonction Congé (rayon constant)'],['Chanfrein (extérieur et intérieur)','Fonction Chanfrein, distance × angle'],
+['Alésage, trou débouchant, trou borgne','Assistant de perçage (condition de fin : traversant ou borgne)'],['Fraisure, lamage, taraudage','Assistant de perçage : type fraisé, lamé ou taraudé'],
+['Rainure, entaille, encoche, saignées, mortaise, lumière, trou oblong, fente','Enlèvement de matière avec extrusion à partir d’une esquisse'],
+['Bossage, tenon, languette, semelle, embase','Base/Bossage avec extrusion'],['Nervure','Fonction Nervure sur une esquisse ouverte'],
+['Cannelure, bride (perçages)','Répétition circulaire d’une fonction'],['Évidement','Enlèvement de matière ou Coque'],['Filetage','Fonction Filetage ou Hélice et spirale'],['Profilé, queue d’aronde','Esquisse du profil puis Extrusion']];
+$('#sw tbody').innerHTML=SW.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join('');
+
+applyTheme();grid();show();
+</script>
+</body>
+</html>
